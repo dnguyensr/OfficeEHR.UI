@@ -16,7 +16,7 @@
         <tbody>
             <tr *ngFor="let patient of patients">
                 <td>{{patient.patientId}}</td>
-                <td>{{patient.fullName}}</td>
+                <td>{{patient.firstName + " "+ patient.lastName}}</td>
                 <td>{{patient.gender}}</td>
                 <td>{{patient.address}}</td>
                 <td>{{patient.phoneNumber}}</td>

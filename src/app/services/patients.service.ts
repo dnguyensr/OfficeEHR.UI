@@ -16,4 +16,8 @@ export class PatientsService {
   getAllPatients(): Observable<Patient[]> {
     return this.http.get<Patient[]>(this.baseApiUrl + 'api/patients')
   }
+
+  addPatient(addPatientRequest: Patient): Observable<Patient> {
+    return this.http.post<Patient>(this.baseApiUrl + 'api/patients', addPatientRequest)
+  }
 }
