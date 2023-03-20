@@ -1,0 +1,28 @@
+<div class="container my-5">
+    <h1 class="mb3">Patients</h1>
+
+    <table class="table" *ngIf="patients && patients.length > 0">
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let patient of patients">
+                <td>{{patient.id}}</td>
+                <td>{{patient.name}}</td>
+                <td>{{patient.gender}}</td>
+                <td>{{patient.address}}</td>
+                <td>{{patient.phonenumber}}</td>
+                <td>{{patient.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!patients">No Patients Found</p>
+</div>
