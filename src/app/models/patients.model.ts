@@ -1,8 +1,8 @@
 export interface Patient {
-    id: number
-    name: string;
+    patientId: number
+    fullName: string;
     gender: string;
     address: string;
-    phonenumber: string;
+    phoneNumber: string;
     email: string;
 }
