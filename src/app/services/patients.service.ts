@@ -20,4 +20,16 @@ export class PatientsService {
   addPatient(addPatientRequest: Patient): Observable<Patient> {
     return this.http.post<Patient>(this.baseApiUrl + 'api/patients', addPatientRequest)
   }
+
+  getPatient(id: string): Observable<Patient> {
+    return this.http.get<Patient>(this.baseApiUrl + 'api/patients/' + id);
+  }
+
+  updatePatient(id: string, updatePatientRequest: Patient): Observable<Patient> {
+    return this.http.put<Patient>(this.baseApiUrl + 'api/patients/' + id, updatePatientRequest)
+  }
+
+  deletePatient(id: string): Observable<Patient> {
+    return this.http.delete<Patient>(this.baseApiUrl + 'api/patients/' + id);
+  }
 }

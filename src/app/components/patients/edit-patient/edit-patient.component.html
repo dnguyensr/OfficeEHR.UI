@@ -1,0 +1,42 @@
+<div class="container my-5">
+    <h1 class="mb-3">Update Patient Information</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updatePatient()">
+                <div class="mb-3">
+                    <label for="patientId" class="form-label">Patient ID</label>
+                    <input type="text" class="form-control" id="patientId" name="patientId" readonly [(ngModel)]="patientDetails.patientId">
+                </div>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="patientDetails.firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="patientDetails.lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label>
+                    <input type="text" class="form-control" id="gender" name="gender" [(ngModel)]="patientDetails.gender">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" [(ngModel)]="patientDetails.address">
+                </div>
+                <div class="mb-3">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phoneNumber" name="phoneeNumber" [(ngModel)]="patientDetails.phoneNumber">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="patientDetails.email">
+                </div>
+
+                <!-- GENDER, ADRESS, EMAIL, PHONE -->
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-danger" (click)="deletePatient(patientDetails.patientId.toString())">Remove Patient</button>
+            </form>
+        </div>
+    </div>
+</div>

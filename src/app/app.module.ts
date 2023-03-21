@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { PatientsListComponent } from './components/patients/patients-list/patients-list.component';
 import { AddPatientComponent } from './components/patients/add-patient/add-patient.component';
 import { FormsModule } from '@angular/forms';
+import { EditPatientComponent } from './components/patients/edit-patient/edit-patient.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PatientsListComponent,
-    AddPatientComponent
+    AddPatientComponent,
+    EditPatientComponent
   ],
   imports: [
     BrowserModule,
