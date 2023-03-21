@@ -1,4 +1,6 @@
-# OfficeEHRUI
+# OfficeEHR.UI
+
+Angular front-end for OfficeEHR ASP.NET Core 6 and Entity Framework application. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
